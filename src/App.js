@@ -1,4 +1,8 @@
+import React from 'react';
+
+import NewExpense from './components/NewExpense/NewExpense';
 import Expenses from './components/Expenses';
+
 function App() {
   const items = [
     {
@@ -27,8 +31,9 @@ function App() {
 
   return (
     <div>
-        <h2>Let's get started!</h2>
+        <h2 style={{color:"white"}}>비용 추적기</h2>
         왜 안되냐고 짱나게 진짜
+        <NewExpense/>
         <Expenses items={items}/>
     </div>
   );

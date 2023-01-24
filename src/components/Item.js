@@ -1,14 +1,14 @@
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 import ItemsDate from './ItemsDate';
 
-import Card from './Card';
+import Card from './UI/Card';
 import './ExpenseItem.css';
 
 function Item(props) {
     const [title, setTitle] = useState(props.title);//[초기값, 업데이트값]
     
     const clickHandler = () => {
-        setTitle('ddddd');
+        setTitle('updated!!');
         
     } 
     return (
