@@ -2,9 +2,9 @@ import React, {useState} from 'react';
 import './Expenseform.css';
 
 function Expenseform(props) {
-    const [enteredTitle,setEnterTitle] = useState('');
-    const [enteredAmount,setEnterAmount] = useState('');
-    const [enteredDate,setEnterDate] = useState('');
+    const [enteredTitle,setEnteredTitle] = useState('');
+    const [enteredAmount,setEnteredAmount] = useState('');
+    const [enteredDate,setEnteredDate] = useState('');
     // const [userInput, setUserInput] = useState({
     //     enteredTitle : '',
     //     enteredAmount : '',
@@ -13,7 +13,7 @@ function Expenseform(props) {
     // console.log(...userInput);
     // document.getElementById('').add    stener('click',(event)=>{})
     const titleChangeHandler = (event) => {
-        setEnterTitle(event.target.value);
+        setEnteredTitle(event.target.value);
         // setUserInput({
         //     ...userInput,
         //     enteredTitle : event.target.value,
@@ -23,14 +23,14 @@ function Expenseform(props) {
         // });
     };
     const amountChangeHandler = (event) => {
-        setEnterAmount(event.target.value);
+        setEnteredAmount(event.target.value);
         // setUserInput({
         //     ...userInput,
         //     setEnterAmount : event.target.value,
         // })
     };
     const dateChangeHandler = (event) => {
-        setEnterDate(event.target.value);
+        setEnteredDate(event.target.value);
         // setUserInput({
         //     ...userInput,
         //     setEnterdate : event.target.value,
@@ -47,9 +47,9 @@ function Expenseform(props) {
         };
         props.onSaveExpenseData(expenseData);
         //NewExpense컴포넌트에서 함수를 가지고와서 여기서 실행함
-        setEnterTitle('');
-        setEnterAmount('');
-        setEnterDate('');
+        setEnteredTitle('');
+        setEnteredAmount('');
+        setEnteredDate('');
     };
 
     return(
@@ -77,7 +77,7 @@ function Expenseform(props) {
                     <label>Date</label>
                     <input 
                         type="date" 
-                        min="2023-01-01"
+                        min="2020-01-01"
                         max="2023-12-31" 
                         value={enteredDate}
                         onChange={dateChangeHandler}
