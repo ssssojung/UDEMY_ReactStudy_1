@@ -29,11 +29,16 @@ function App() {
     },
   ];
 
+  const addItemHandler = expense =>{
+    console.log('In App.js')
+    console.log(items);
+  }
+
   return (
     <div>
         <h2 style={{color:"white"}}>비용 추적기</h2>
         왜 안되냐고 짱나게 진짜
-        <NewExpense/>
+        <NewExpense onAddItem={addItemHandler}/>
         <Expenses items={items}/>
     </div>
   );
