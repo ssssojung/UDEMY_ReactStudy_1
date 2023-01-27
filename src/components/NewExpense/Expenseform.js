@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
-import './Expenseform.css';
+import './ExpenseForm.css';
 
-function Expenseform(props) {
+function ExpenseForm(props) {
     const [enteredTitle,setEnteredTitle] = useState('');
     const [enteredAmount,setEnteredAmount] = useState('');
     const [enteredDate,setEnteredDate] = useState('');
@@ -59,7 +59,7 @@ function Expenseform(props) {
                     <label>Title</label>
                     <input 
                         type="text" 
-                        vlue={enteredTitle} 
+                        value={enteredTitle} 
                         onChange={titleChangeHandler}
                     />
                 </div>
@@ -69,7 +69,7 @@ function Expenseform(props) {
                         type="number" 
                         min="0.01" 
                         step="0.01"
-                        vaule={enteredAmount} 
+                        value={enteredAmount} 
                         onChange={amountChangeHandler}
                     />
                 </div>
@@ -77,7 +77,7 @@ function Expenseform(props) {
                     <label>Date</label>
                     <input 
                         type="date" 
-                        min="2020-01-01"
+                        min='2020-01-01'
                         max="2023-12-31" 
                         value={enteredDate}
                         onChange={dateChangeHandler}
@@ -88,8 +88,8 @@ function Expenseform(props) {
                 <button type='submit'>Add Expense</button>
             </div>
         </form>
-    )
+    );
     
 };
 
-export default Expenseform;
+export default ExpenseForm;
