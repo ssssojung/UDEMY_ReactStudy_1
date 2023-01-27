@@ -11,9 +11,11 @@ function App() {
       amount: 94.12,
       date: new Date(2023, 7, 14),
     },
-    { id: 'e2', title: 'New TV', 
-    amount: 799.49, 
-    date: new Date(2022, 2, 12) 
+    { 
+      id: 'e2', 
+      title: 'New TV', 
+      amount: 799.49, 
+      date: new Date(2022, 2, 12) 
     },
     {
       id: 'e3',
