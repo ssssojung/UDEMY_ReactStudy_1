@@ -6,9 +6,9 @@ import './NewExpense.css';
 function NewExpense(props) {
     const[isEditing, setIsEditing] = useState(false);
 
-    const saveExpenseDataHandler = (enterExpenseData) => {
+    const saveExpenseDataHandler = (enteredExpenseData) => {
         const expenseData = {
-            ...enterExpenseData,
+            ...enteredExpenseData,
             id : Math.random().toString()
         };
         props.onAddItem(expenseData);

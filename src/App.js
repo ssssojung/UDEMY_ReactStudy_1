@@ -34,8 +34,10 @@ function App() {
   const [items, setItems] = useState(DUMMY_ITEMS);
 
   const addItemHandler = items =>{
-    setItems([items, ...items]);
-  }
+    setItems((previtems) => {
+      return [items, ...previtems];
+    });
+  };
 
   return (
     <div>
